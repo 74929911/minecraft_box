@@ -1,6 +1,21 @@
 const box = document.getElementById("box");
-const ventana = document.getElementById("ventana");
+// const ventana = document.getElementById("ventana");
+const conteiner_box = document.getElementById("conteiner_box");
 let cambio = 0;
+// let colors = ["blue", "red", "green"];
+let a = 0;
+let colores_index = 0;
+const contenedor = ["https://wallpaperaccess.com/full/2915377.jpg", "https://wallpaperaccess.com/full/2915376.jpg"]
+setInterval(() => {
+    conteiner_box.style.backgroundImage = `url(${contenedor[a++]})`
+    if (a == contenedor.length) {
+        a = 0;
+    }
+    conteiner_box.style.backgroundColor = `${colors[colores_index++]}`;
+    if (colores_index == colors.length) {
+        colores_index = 0;
+    }
+}, 1000);
 box.addEventListener("click", (e) => {
     if (cambio == 0) {
         box.setAttribute("src", "assets/img/cofre_minecraft_abierto.png");
