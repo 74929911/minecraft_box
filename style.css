@@ -39,21 +39,25 @@
     /* width: 350px; */
     width: 80%;
 }
+
 *{
     box-sizing: border-box;
 }
-@media (max-width:293px) {
+@media (max-width:393px) {
     .conteiner>img[src*="cerrado.png"]{
-     width: 380px;
+    position: relative;
+    left: 20px;
+    width: 380px;
     }
     .conteiner>img[src*="abierto.png"]{
      width:600px; 
 }
-}
+
+} 
  @keyframes box {
     from{
         transform: translateY(5%);
     }to{
         transform: translate(0);
     }
-}  
+}
